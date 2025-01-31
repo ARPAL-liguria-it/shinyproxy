@@ -17,4 +17,3 @@ services:
 networks:
   shiny-net:
     name: shiny-net
-    external: true
