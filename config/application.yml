@@ -16,6 +16,8 @@ proxy:
     container-cmd: ["R", "-e", "SIprecisa::run_app()"]
     container-image: arpal/siprecisa:latest
     container-network: "${proxy.docker.container-network}"
+    container-env:
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
     minimum-seats-available: 1
     allow-container-re-use: false
     hide-navbar-on-main-page-link: true
@@ -23,6 +25,8 @@ proxy:
     container-cmd: ["R", "-e", "SIconfronta::run_app()"]
     container-image: arpal/siconfronta:latest
     container-network: "${proxy.docker.container-network}"
+    container-env:
+      GITHUB_TOKEN: ${GITHUB_TOKEN}
     minimum-seats-available: 1
     allow-container-re-use: false
     hide-navbar-on-main-page-link: true
